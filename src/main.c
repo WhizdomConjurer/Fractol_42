@@ -6,7 +6,7 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:53:58 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 16:55:58 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/10 17:12:46 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	mlx_key_hook(engine.mlx, ft_key_func, &engine);
 	mlx_scroll_hook(engine.mlx, ft_func_scroll, &engine);
 	mlx_image_to_window(engine.mlx, engine.img, 0, 0);
-	ft_draw_fractol(&engine);
+	ft_draw_engine(&engine);
 	mlx_loop(engine.mlx);
 	mlx_terminate(engine.mlx);
 	return (0);

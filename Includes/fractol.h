@@ -6,7 +6,7 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:54:21 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 16:56:21 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/10 17:27:56 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,10 @@ void	ft_func_scroll(double xdelta, double ydelta, void *param);
 void	change_fractal(int key, t_engine *engine);
 void	ft_reset_engine(t_engine *engine);
 void	ft_key_func(mlx_key_data_t mkd, void *param);
+void	ft_draw_engine(t_engine *engine);
+float	ft_atof(const char *str);
+void	ft_init(t_engine *engine, int ac, char **av);
+void	ft_error(void);
 
 # ifdef __linux__
 

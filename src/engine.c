@@ -6,13 +6,13 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:31:13 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 15:51:04 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/10 17:24:37 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/fractol.h"
 
-void	set_fractal_type(t_engine *engine)
+void	ft_set_fractal(t_engine *engine)
 {
 	size_t	len;
 

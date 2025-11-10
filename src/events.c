@@ -6,7 +6,7 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 16:02:20 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 16:55:53 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/10 17:26:43 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	ft_func_scroll(double xdelta, double ydelta, void *param)
 	else
 		zoom_factor = 0.9;
 	ft_position_zoom(engine, zoom_factor);
-	ft_draw_fractol(engine);
+	ft_draw_engine(engine);
 }
 
 void	ft_key_func(mlx_key_data_t mkd, void *param)
@@ -80,5 +80,5 @@ void	ft_key_func(mlx_key_data_t mkd, void *param)
         change_fractal(mkd.key, engine);
     else if (mkd.key == MLX_KEY_0)
         ft_reset_engine(engine);
-    ft_draw_fractol(engine);
+    ft_draw_engine(engine);
 }
