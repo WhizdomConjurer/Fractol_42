@@ -6,11 +6,28 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:31:13 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 15:31:38 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/10 15:51:04 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/fractol.h"
+
+void	set_fractal_type(t_engine *engine)
+{
+	size_t	len;
+
+	if (!engine)
+		return ;
+	len = ft_strlen(engine->av[1]);
+	if (ft_strncmp(engine->av[1], MANDELBROT_STR, len) == 0)
+		engine->set = MANDELBROT;
+	else if (ft_strncmp(engine->av[1], JULIA_STR, len) == 0)
+		engine->set = JULIA;
+	else if (ft_strncmp(engine->av[1], BURNING_SHIP_STR, len) == 0)
+		engine->set = BURNING_SHIP;
+	else if (ft_strncmp(engine->av[1], PHOENIX_STR, len) == 0)
+		engine->set = PHOENIX;
+}
 
 void	ft_reset_engine(t_engine *engine)
 {
@@ -25,6 +42,19 @@ void	ft_reset_engine(t_engine *engine)
 	engine->min_y = -1.5;
 	engine->max_y = 1.5;
 	engine->color_shift = 0;
+	if (engine->ac == 2)
+	{
+		engine->julia_r = 0.355;
+		engine->julia_i = 0.355;
+		engine->phoenix_p = -0.5;
+	}
+	else if (engine->ac == 4)
+	{
+		engine->julia_r = ft_atof(engine->av[2]);
+		engine->julia_i = ft_atof(engine->av[3]);
+		engine->phoenix_p = -0.5;
+	}
+	ft_set_fractal(engine);
 }
 
 void	ft_init(t_engine *engine, int ac, char **av)
@@ -38,4 +68,15 @@ void	ft_init(t_engine *engine, int ac, char **av)
 	engine->ac = ac;
 	engine->av = av;
 	ft_reset_engine(engine);
+}
+
+void	change_fractal(int key, t_engine *engine)
+{
+	ft_reset_engine(engine);
+	if (key == KEY_TWO)
+		engine->set = JULIA;
+	else if (key == KEY_THREE)
+		engine->set = BURNING_SHIP;
+	else if (key == KEY_FOUR)
+		engine->set = PHOENIX;
 }
