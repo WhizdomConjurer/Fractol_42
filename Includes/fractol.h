@@ -6,7 +6,7 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:54:21 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 17:27:56 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/10 17:48:37 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,12 @@ void	ft_draw_engine(t_engine *engine);
 float	ft_atof(const char *str);
 void	ft_init(t_engine *engine, int ac, char **av);
 void	ft_error(void);
+void	ft_engine_calculate(double mapped_x, double mapped_y,
+	t_engine *engine);
+uint32_t	ft_get_color_mandelbrot(t_engine *engine);
+uint32_t	ft_get_color_julia(t_engine *engine);
+uint32_t	ft_get_color_burningship(t_engine *engine);
+uint32_t	ft_get_color_phoenix(t_engine *engine);
 
 # ifdef __linux__
 

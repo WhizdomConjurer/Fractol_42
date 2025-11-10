@@ -6,7 +6,7 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:11:22 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 15:22:18 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/10 18:19:23 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,8 @@ void	ft_error(void)
 	ft_putstr_fd("\n", 1);
 	ft_putstr_fd(" +------------------ Let me help you! ---------------------+\n", 1);
 	ft_putstr_fd(" |                                                         |\n", 1);
-	ft_putstr_fd(" | Usage: ./fractol [mandelbrot / julia / burning_ship     |\n", 1);
-	ft_putstr_fd(" |                   phoenix / ********* /                 |\n", 1);
-	ft_putstr_fd(" |                   ****************]                     |\n", 1);
+	ft_putstr_fd(" | Use: ./fractol [mandelbrot / julia [] [] / burning_ship |\n", 1);
+	ft_putstr_fd(" |                   phoenix ]                             |\n", 1);
 	ft_putstr_fd(" |                                                         |\n", 1);
 	ft_putstr_fd(" | e.g: ./fractol mandelbrot                               |\n", 1);
 	ft_putstr_fd(" |                                                         |\n", 1);
