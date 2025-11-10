@@ -6,7 +6,7 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:54:21 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 17:48:37 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/10 18:40:19 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@
 
 # define WIDTH 1280
 # define HEIGHT 960
+
+typedef struct s_color_map
+{
+	int key;
+	int delta;
+}	t_color_map;
 
 typedef struct s_engine
 {
@@ -71,6 +77,7 @@ uint32_t	ft_get_color_mandelbrot(t_engine *engine);
 uint32_t	ft_get_color_julia(t_engine *engine);
 uint32_t	ft_get_color_burningship(t_engine *engine);
 uint32_t	ft_get_color_phoenix(t_engine *engine);
+void	change_color(int key, t_engine *engine);
 
 # ifdef __linux__
 

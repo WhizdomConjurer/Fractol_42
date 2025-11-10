@@ -6,7 +6,7 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 16:02:20 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 17:26:43 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/10 18:51:54 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,9 @@ void	ft_key_func(mlx_key_data_t mkd, void *param)
         change_fractal(mkd.key, engine);
     else if (mkd.key == MLX_KEY_0)
         ft_reset_engine(engine);
+    else if (mkd.key >= MLX_KEY_A && mkd.key <= MLX_KEY_Z)
+        change_color(mkd.key, engine);
+    else if (mkd.key == MLX_KEY_SPACE)
+		engine->color_shift += 3;
     ft_draw_engine(engine);
 }
