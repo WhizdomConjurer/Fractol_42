@@ -6,12 +6,12 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 13:54:21 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 18:40:19 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/12 17:29:14 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTAL_H
-# define FRACTAL_H
+#ifndef FRACTOL_H
+# define FRACTOL_H
 
 # include "MLX42/include/MLX42/MLX42.h"
 # include "libft/libft.h"
@@ -35,8 +35,8 @@
 
 typedef struct s_color_map
 {
-	int key;
-	int delta;
+	int	key;
+	int	delta;
 }	t_color_map;
 
 typedef struct s_engine
@@ -63,21 +63,21 @@ typedef struct s_engine
 	uint32_t	color_shift;
 }				t_engine;
 
-void	ft_func_scroll(double xdelta, double ydelta, void *param);
-void	change_fractal(int key, t_engine *engine);
-void	ft_reset_engine(t_engine *engine);
-void	ft_key_func(mlx_key_data_t mkd, void *param);
-void	ft_draw_engine(t_engine *engine);
-float	ft_atof(const char *str);
-void	ft_init(t_engine *engine, int ac, char **av);
-void	ft_error(void);
-void	ft_engine_calculate(double mapped_x, double mapped_y,
-	t_engine *engine);
+void		ft_func_scroll(double xdelta, double ydelta, void *param);
+void		change_fractal(int key, t_engine *engine);
+void		ft_reset_engine(t_engine *engine);
+void		ft_key_func(mlx_key_data_t mkd, void *param);
+void		ft_draw_engine(t_engine *engine);
+float		ft_atof(const char *str);
+void		ft_init(t_engine *engine, int ac, char **av);
+void		ft_error(void);
+void		ft_engine_calculate(double mapped_x, double mapped_y,
+				t_engine *engine);
 uint32_t	ft_get_color_mandelbrot(t_engine *engine);
 uint32_t	ft_get_color_julia(t_engine *engine);
 uint32_t	ft_get_color_burningship(t_engine *engine);
 uint32_t	ft_get_color_phoenix(t_engine *engine);
-void	change_color(int key, t_engine *engine);
+void		change_color(int key, t_engine *engine);
 
 # ifdef __linux__
 
