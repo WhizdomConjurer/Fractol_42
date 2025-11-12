@@ -6,7 +6,7 @@
 /*   By: puzzlesanalytik <puzzlesanalytik@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:31:13 by puzzlesanal       #+#    #+#             */
-/*   Updated: 2025/11/10 18:12:23 by puzzlesanal      ###   ########.fr       */
+/*   Updated: 2025/11/12 17:14:58 by puzzlesanal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ void	ft_init(t_engine *engine, int ac, char **av)
 void	change_fractal(int key, t_engine *engine)
 {
 	ft_reset_engine(engine);
-	
 	if (key == MLX_KEY_1)
 		engine->set = MANDELBROT;
 	else if (key == MLX_KEY_2)
